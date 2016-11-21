@@ -68,7 +68,8 @@ def print_qr(fileDir):
     if config.OS == 'Darwin':
         subprocess.call(['open', fileDir])
     elif config.OS == 'Linux':
-        subprocess.call(['xdg-open', fileDir])
+        #subprocess.call(['xdg-open', fileDir])
+        subprocess.call(['python3', '-m', 'http.server'])
     else:
         os.startfile(fileDir)
 try:
